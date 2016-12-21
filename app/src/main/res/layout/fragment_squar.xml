@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <com.joytouch.superlive.widget.PullToRefreshLayout
+        android:id="@+id/refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/title">
+        <include layout="@layout/refresh_head" />
+        <com.joytouch.superlive.widget.PullableScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <com.joytouch.superlive.widget.MyListView
+                    android:id="@+id/listView_attention"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:divider="@color/view"
+                    android:dividerHeight="1px">
+                </com.joytouch.superlive.widget.MyListView>
+                <LinearLayout
+                    android:id="@+id/ll_line"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="8dp"
+                        android:background="@color/chat_activity_bg">
+                    </RelativeLayout>
+                    <TextView
+                        android:id="@+id/tv_recommend"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="为您推荐"
+                        android:textSize="16sp"
+                        android:textColor="@color/textcolor_1"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="17dp"/>
+                </LinearLayout>
+
+                <com.joytouch.superlive.widget.MyListView
+                    android:id="@+id/listView_recommend"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:divider="@color/view"
+                    android:dividerHeight="1px">
+                </com.joytouch.superlive.widget.MyListView>
+            </LinearLayout>
+        </com.joytouch.superlive.widget.PullableScrollView>
+        <include layout="@layout/load_more" />
+    </com.joytouch.superlive.widget.PullToRefreshLayout>
+    <include
+        android:id="@+id/loading"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        layout="@layout/loading_failed"
+        android:layout_below="@id/title"/>
+</RelativeLayout>

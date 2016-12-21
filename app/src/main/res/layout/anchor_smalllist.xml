@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<com.joytouch.superlive.widget.PullToRefreshLayout
+    android:id="@+id/anchorlist_prl"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:background="#7b000000">
+    <include layout="@layout/refresh_head"/>
+    <com.joytouch.superlive.widget.PullableListView
+        android:id="@+id/anchorlist"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:listSelector="@color/transparent_background"
+        android:background="@color/transparent_background"
+        android:divider="#00000000"
+        android:scrollbars="none"
+        android:dividerHeight="0dp"></com.joytouch.superlive.widget.PullableListView>
+    <include layout="@layout/load_more"/>
+</com.joytouch.superlive.widget.PullToRefreshLayout>
+</LinearLayout>

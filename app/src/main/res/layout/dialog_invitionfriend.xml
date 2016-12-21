@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:gravity="bottom"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#66000000">
+
+
+        <LinearLayout
+            android:layout_height="110dp"
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:background="@color/withe"
+            android:paddingLeft="16dp"
+            android:layout_alignParentBottom="true"
+            android:clickable="true"
+            android:paddingRight="16dp">
+            <LinearLayout
+                android:id="@+id/qq_ll"
+                style="@style/ll">
+                <ImageView
+                    android:layout_height="45dp"
+                    android:layout_width="45dp"
+                    android:background="@drawable/qq"
+                    android:id="@+id/qq"/>
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="QQ"
+                    android:textColor="@color/textcolor_1"
+                    android:layout_marginTop="5dp"
+                    android:textSize="12sp"/>
+            </LinearLayout>
+
+            <LinearLayout style="@style/ll">
+            <ImageView
+                android:layout_height="45dp"
+                android:layout_width="45dp"
+                android:background="@drawable/wx"
+                android:id="@+id/wx"/>
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="微信"
+                android:textColor="@color/textcolor_1"
+                android:layout_marginTop="5dp"
+                android:textSize="12sp"/>
+        </LinearLayout>
+            <LinearLayout style="@style/ll">
+                <ImageView
+                    android:layout_height="45dp"
+                    android:layout_width="45dp"
+                    android:background="@drawable/wx_peng"
+                    android:id="@+id/wxzone"/>
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="朋友圈"
+                    android:textColor="@color/textcolor_1"
+                    android:layout_marginTop="5dp"
+                    android:textSize="12sp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/fans_ll"
+                style="@style/ll">
+                <ImageView
+                    android:layout_height="45dp"
+                    android:layout_width="45dp"
+                    android:id="@+id/fans"
+                    android:background="@drawable/invitation_fans"/>
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="关注&amp;粉丝"
+                    android:textColor="@color/textcolor_1"
+                    android:layout_marginTop="5dp"
+                    android:textSize="12sp"/>
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

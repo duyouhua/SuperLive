@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/root_lin"
+    android:orientation="vertical"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/main" >
+
+        <ImageButton
+            android:id="@+id/btn_back"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/finish"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_toRightOf="@id/btn_back"
+            android:gravity="center"
+            android:paddingRight="56dp"
+            android:singleLine="true"
+            android:textColor="@color/v4_withe"
+            android:textSize="@dimen/text_size_large" />
+        <ImageButton
+            android:id="@+id/share"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/web_share"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="8dp" />
+    </RelativeLayout>
+    <ProgressBar
+        android:id="@+id/pb"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="3dip"
+        android:max="100"
+        android:progress="30"
+        android:progressDrawable="@drawable/progress_bar_states" >
+    </ProgressBar>
+
+    <WebView
+        android:id="@+id/webview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/header" />
+</LinearLayout>

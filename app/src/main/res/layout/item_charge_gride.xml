@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/rl_charge"
+        android:layout_width="100dp"
+        android:layout_height="70dp"
+        android:background="@drawable/charge_shape_theme_color">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
+            <TextView
+                android:id="@+id/tv_gold_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/theme_color"
+                android:text="100金币"
+                android:textSize="15sp" />
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/mo_tu"
+                android:layout_toLeftOf="@+id/tv_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:text="¥ "
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/tv_gold_num"
+                android:textColor="@color/textcolor_1"
+                android:layout_marginTop="4dp"/>
+            <TextView
+                android:id="@+id/tv_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:text="1元"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/tv_gold_num"
+                android:textColor="@color/textcolor_1"
+                android:layout_marginTop="4dp"/>
+        </RelativeLayout>
+
+    </RelativeLayout>
+</LinearLayout>

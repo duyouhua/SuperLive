@@ -1,0 +1,140 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/ll_present_root"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+    <LinearLayout
+        android:id="@+id/ll_rrr"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical" >
+
+    <LinearLayout
+        android:background="#F1F2F4"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:orientation="vertical" >
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/vp_details"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+        </android.support.v4.view.ViewPager >
+    </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:background="#30979797"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/v4_view_0.5" />
+            <LinearLayout
+                android:background="#F1F2F4"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/reward0"
+                        android:layout_width="14dp"
+                        android:layout_height="14dp" />
+                    <TextView
+                        android:id="@+id/mymoney"
+                        android:layout_gravity="center_vertical"
+                        android:textSize="15dp"
+                        android:paddingBottom="3dp"
+                        android:gravity="center"
+                        android:textColor="#333333"
+                        android:layout_marginLeft="3dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp" />
+                    <TextView
+                        android:layout_gravity="center_vertical"
+                        android:textSize="15dp"
+                        android:id="@+id/tv_chongzhi"
+                        android:textColor="#333333"
+                        android:text="充值"
+                        android:layout_marginLeft="30dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:layout_marginLeft="2dp"
+                        android:layout_gravity="center_vertical"
+                        android:background="@drawable/gso"
+                        android:layout_width="5dp"
+                        android:layout_height="8dp" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/btn_submit"
+                    android:paddingBottom="4dp"
+                    android:paddingTop="3dp"
+                    android:layout_marginRight="20dp"
+                    android:paddingRight="15dp"
+                    android:paddingLeft="15dp"
+                    android:textColor="@color/white"
+                    android:text="赠送"
+                    android:background="@drawable/retang_solid_text_bg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+</LinearLayout>
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/ll_time_down"
+        android:gravity="bottom"
+        android:layout_alignParentBottom="true"
+        android:layout_width="wrap_content"
+        android:layout_height="140dp">
+        <ImageView
+            android:id="@+id/circle_bac"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="15dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/circle_lanse"
+            android:layout_width="60dp"
+            android:layout_height="60dp" />
+        <!--倒计时连点-->
+        <LinearLayout
+            android:layout_marginRight="20dp"
+            android:layout_alignParentRight="true"
+            android:orientation="vertical"
+            android:layout_width="60dp"
+            android:layout_height="60dp">
+            <TextView
+                android:paddingTop="3dp"
+                android:gravity="center"
+                android:textSize="10dp"
+                android:id="@+id/lianfa"
+                android:textColor="@color/white"
+                android:text="连发"
+                android:layout_width="60dp"
+                android:layout_height="15dp" />
+            <TextView
+                android:id="@+id/tv_counttime"
+                android:textSize="30dp"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:layout_width="60dp"
+                android:layout_height="40dp" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

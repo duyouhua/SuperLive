@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_gravity="center"
+    android:layout_width="250dp"
+    android:background="@drawable/retang_solid_buton_red"
+    android:layout_height="300dp">
+
+    <LinearLayout
+        android:gravity="right"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <ImageView
+            android:id="@+id/cancle"
+            android:layout_marginRight="10dp"
+            android:layout_gravity="center"
+            android:background="@drawable/close_black"
+            android:layout_width="20dp"
+            android:layout_height="20dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:gravity="center_horizontal"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:layout_marginTop="10dp"
+            android:background="@drawable/redx"
+            android:layout_width="100dp"
+            android:layout_height="100dp" />
+        <TextView
+            android:layout_marginTop="10dp"
+            android:textSize="12dp"
+            android:gravity="center"
+            android:textColor="#999999"
+            android:text="拼手气红包"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textColor="#333333"
+                android:textSize="12dp"
+                android:text="888"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <ImageView
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/reward0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+       <TextView
+           android:layout_marginTop="10dp"
+           android:gravity="center"
+           android:textColor="#999999"
+           android:textSize="12dp"
+           android:text="*发送该红包需要支付888金币"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/sucess"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:layout_marginTop="15dp"
+            android:paddingRight="15dp"
+            android:paddingLeft="15dp"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:textSize="12dp"
+            android:background="@drawable/retang_solid_text_bg"
+            android:text="赠送"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</LinearLayout>

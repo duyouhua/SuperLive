@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/v4_withe"
+    android:gravity="center"
+    android:id="@+id/ll_ping"
+    android:orientation="vertical">
+        <LinearLayout
+            android:id="@+id/loding_ll"
+            android:background="@color/bg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/v4_logo"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:background="@drawable/progress_loading" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="正在刷新"
+                android:textColor="@color/v4_gray_two"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/loading_failed"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/bg"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:background="@drawable/error_net" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="点击屏幕，重新加载"
+                android:textColor="#999999"
+                android:textSize="14sp" />
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/loading_null"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/bg"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:background="@drawable/nolist" />
+            <TextView
+                android:id="@+id/tvnull"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="暂无内容"
+                android:textColor="#999999"
+                android:textSize="14sp" />
+        </LinearLayout>
+</LinearLayout>

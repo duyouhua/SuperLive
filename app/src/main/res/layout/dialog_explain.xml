@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+     android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="295dp"
+        android:layout_height="320dp"
+        android:layout_centerInParent="true"
+        android:background="@color/white">
+        <RelativeLayout
+            android:id="@+id/rl_close"
+            android:layout_width="match_parent"
+            android:layout_height="54dp">
+            <ImageView
+                android:id="@+id/iv_close"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:background="@drawable/close_black"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="16dp"/>
+        </RelativeLayout>
+        <LinearLayout
+            android:id="@+id/ll_guize"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@id/rl_close"
+            android:layout_marginLeft="36dp"
+            android:layout_marginRight="36dp">
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1px"
+                android:background="@color/line_code"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical"/>
+            <View
+                android:layout_width="14dp"
+                android:layout_height="1dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="规则说明"
+                android:textColor="@color/textcolor_1"
+                android:textSize="16sp"
+                android:gravity="center"/>
+            <View
+                android:layout_width="14dp"
+                android:layout_height="1dp"/>
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1px"
+                android:background="@color/line_code"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical"/>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/ll_guize">
+            <ScrollView
+                android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="1.榜单周期
+系统每周一00:00自动更新榜单并统计竞猜金额发奖，保证榜单的真实有效快捷。
+2.榜单排名
+公平公正的榜单，根据每周竞猜盈利数额统计进行排名，任何人都可以凭借自己的每一次竞猜让自己离榜首更近一步。
+3.榜单奖励
+努力就会有回报，前一百名均会得奖，根据排名的不同将会得到不同数额的金币奖励。真正的全民竞猜全民上榜。"
+                    android:id="@+id/tv_rules"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="36dp"
+                    android:layout_marginRight="36dp"
+                    android:lineSpacingExtra="3dp"
+                    android:lineSpacingMultiplier="1.5"
+                    android:textSize="12sp"
+                    android:textColor="@color/textcolor_1" />
+            </ScrollView>
+
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

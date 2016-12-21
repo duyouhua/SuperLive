@@ -1,0 +1,16 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_gridview"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginTop="30dp"
+    android:background="#F1F2F4" >
+
+    <com.joytouch.superlive.widget.MyScrollview.MyGridView
+        android:id="@+id/gridview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:numColumns="4" >
+    </com.joytouch.superlive.widget.MyScrollview.MyGridView>
+
+</LinearLayout>

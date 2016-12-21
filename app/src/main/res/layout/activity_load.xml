@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.joytouch.superlive.activity.LoadActivity">
+    <ImageView
+        android:background="@drawable/load_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+    <ImageView
+        android:id="@+id/iv_mohu"
+        android:background="@drawable/load_mohu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+    <ImageView
+        android:id="@+id/iv_logo"
+        android:layout_width="89dp"
+        android:layout_height="89dp"
+        android:background="@drawable/logo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"/>
+    <ImageView
+        android:id="@+id/iv_cjzb"
+        android:layout_width="70dp"
+        android:layout_height="29dp"
+        android:background="@drawable/chaojizhibo"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/iv_logo"
+        android:layout_marginTop="14dp"/>
+    <ImageView
+        android:id="@+id/iv_title"
+        android:layout_width="150dp"
+        android:layout_height="30dp"
+        android:background="@drawable/cjzb_name"
+        android:layout_below="@id/iv_cjzb"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="45dp"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/iv_title"
+        android:layout_marginTop="20dp">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
+            <TextView
+                android:id="@+id/tv_load"
+                android:layout_width="200dp"
+                android:layout_height="40dp"
+                android:text="登录"
+                android:gravity="center"
+                android:textSize="16sp"
+                android:textColor="@color/titlebar_color"
+                android:background="@drawable/load_back_nocolor"
+                android:layout_centerHorizontal="true" />
+            <TextView
+                android:id="@+id/tv_register"
+                android:layout_width="200dp"
+                android:layout_height="40dp"
+                android:text="注册"
+                android:gravity="center"
+                android:textSize="16sp"
+                android:textColor="@color/titlebar_color"
+                android:background="@drawable/load_back_nocolor"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/tv_load"
+                android:layout_marginTop="13dp"/>
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="40dp"
+            android:layout_marginLeft="100dp"
+            android:layout_marginRight="100dp">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+                <ImageView
+                    android:id="@+id/iv_qq"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/qq_unselect"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+                <ImageView
+                    android:id="@+id/iv_weixin"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/weixin_unselect"/>
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

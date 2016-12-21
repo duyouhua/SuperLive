@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/titlebar_color">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:background="@color/main">
+        <LinearLayout
+            android:id="@+id/livelist_title"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="4"
+            android:orientation="horizontal"/>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:layout_weight="1">
+            <LinearLayout
+                android:id="@+id/lottery"
+                android:layout_width="47dp"
+                android:layout_height="27dp"
+                android:gravity="center_vertical|left"
+                android:paddingRight="2dp"
+                android:paddingLeft="2dp"
+                android:background="@drawable/livelist_lottery"
+                android:orientation="horizontal">
+                <Button
+                    android:id="@+id/circle"
+                    android:layout_width="21dp"
+                    android:layout_height="21dp"
+                    android:background="@drawable/cicrl_main"
+                    android:textColor="@color/withe"
+                    android:textSize="12sp"
+                    android:layout_marginRight="1dp"
+                    android:layout_marginBottom="0.5dp"
+                    android:gravity="center"
+                    android:text="猜"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+<include
+    android:id="@+id/loading"
+    layout="@layout/loading_failed"/>
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+</LinearLayout>

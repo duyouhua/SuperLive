@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/chat_activity_bg"
+    tools:context="com.joytouch.superlive.activity.MyPropActivity">
+    <include
+        android:id="@+id/title"
+        layout="@layout/titlebar"/>
+    <com.joytouch.superlive.widget.PullToRefreshLayout
+        android:id="@+id/refresh"
+        android:layout_below="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <include layout="@layout/refresh_head" />
+        <com.joytouch.superlive.widget.PullableListView
+            android:id="@+id/listView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@null" />
+        <include layout="@layout/load_more" />
+    </com.joytouch.superlive.widget.PullToRefreshLayout>
+    <com.joytouch.superlive.utils.view.CommonShowView
+        android:id="@+id/loadstate_ing"
+        android:layout_below="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</RelativeLayout>

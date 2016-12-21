@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:padding="10dp"
+    android:background="@drawable/retangle_soild_withe"
+    android:layout_height="wrap_content">
+
+            <com.joytouch.superlive.widget.TimeSelectDialog.saishitype_picker
+                android:id="@+id/citypicker"
+                android:gravity="center"
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="150dp" />
+            <LinearLayout
+                android:layout_below="@+id/citypicker"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+                <RelativeLayout
+                    android:id="@+id/positive"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.8"
+                    android:background="@drawable/retang_theme"
+                    >
+                    <TextView
+                        android:id="@+id/textView3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:text="确定"
+                        android:textColor="@color/white"
+                        android:textSize="17sp" />
+                </RelativeLayout>
+                <View
+                    android:layout_width="20dp"
+                    android:layout_height="42dp"
+                    android:background="@color/white"/>
+                <RelativeLayout
+                    android:id="@+id/negtive"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_weight="0.75"
+                    android:background="@drawable/retangle_gray" >
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:text="取消"
+                        android:textColor="@color/white"
+                        android:textSize="17sp" />
+                </RelativeLayout>
+            </LinearLayout>
+
+</RelativeLayout>

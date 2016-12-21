@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<com.joytouch.superlive.widget.PullToRefreshLayout
+    android:id="@+id/refresh"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include layout="@layout/refresh_head"/>
+    <com.joytouch.superlive.widget.PullableExpandableListView
+        android:id="@+id/pelv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@color/transparent_background"
+        android:dividerHeight="0dp"
+        android:groupIndicator="@null"
+        android:listSelector="@color/transparent_background"
+        android:background="@color/bg"/>
+    <include layout="@layout/load_more"/>
+</com.joytouch.superlive.widget.PullToRefreshLayout>
+    <WebView
+        android:id="@+id/web"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <include
+        android:id="@+id/loading"
+        layout="@layout/loading_failed"/>
+</RelativeLayout>

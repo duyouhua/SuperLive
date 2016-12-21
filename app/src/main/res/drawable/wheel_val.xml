@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+	<item>
+		<shape android:shape="rectangle">
+			<gradient
+				android:startColor="#00ffffff"
+				android:centerColor="#00ffffff"
+				android:endColor="#00ffffff"
+				android:angle="90" />
+		</shape>
+	</item>
+	<item android:left="-4dp" android:right="-4dp" android:top="1dp" android:bottom="1dp">
+		<shape android:shape="rectangle">
+		    <!-- 
+    	android:angle="90" 颜色渐变方向从下向上
+    	android:angle="0"  颜色渐变方向从左向右
+    	android:angle="45" 颜色渐变方向斜向上
+     -->
+	<gradient
+		android:startColor="#00000000"
+		android:centerColor="#00000000"
+		android:endColor="#00000000"
+		android:angle="90" />
+
+	<!-- 描边 -->
+	<stroke android:width="1dp"
+	     android:color="#50b1b1b1" /> 
+		</shape>
+	</item> 
+</layer-list>

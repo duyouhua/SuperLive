@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/live_end">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1.2">
+    <ImageView
+        android:id="@+id/close"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:background="@drawable/withe_close"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="16dp"/>
+    <TextView
+        android:id="@+id/live_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:textColor="@color/withe"
+        android:background="@color/transparent_background"
+        android:textColorHint="@color/withe"
+        android:textSize="18sp"
+        android:singleLine="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"/>
+</RelativeLayout>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <RadioButton
+            android:id="@+id/rb_qq"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:button="@null"
+            android:background="@drawable/selector_share_qq"/>
+        <View
+            android:layout_width="19dp"
+            android:layout_height="1dp"/>
+        <RadioButton
+            android:id="@+id/rb_wx"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:button="@null"
+            android:background="@drawable/selector_share_wx"/>
+        <View
+            android:layout_width="19dp"
+            android:layout_height="1dp"/>
+        <RadioButton
+            android:id="@+id/rb_pyq"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:button="@null"
+            android:background="@drawable/selector_share_pyq"/>
+        <View
+            android:layout_width="19dp"
+            android:layout_height="1dp"/>
+        <RadioButton
+            android:id="@+id/rb_fans"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:button="@null"
+            android:background="@drawable/selector_share_fans"/>
+    </RadioGroup>
+    <Button
+        android:id="@+id/start"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:background="@drawable/retangle_balack_20_40_selector"
+        android:gravity="center"
+        android:textColor="@color/withe"
+        android:textSize="15sp"
+        android:layout_marginTop="19dp"
+        android:text="开始直播"/>
+</LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

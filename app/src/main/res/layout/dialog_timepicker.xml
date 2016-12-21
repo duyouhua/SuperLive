@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+        <com.joytouch.superlive.widget.WheelView
+            android:id="@+id/time_h"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+        </com.joytouch.superlive.widget.WheelView>
+        <com.joytouch.superlive.widget.WheelView
+            android:id="@+id/time_m"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+        </com.joytouch.superlive.widget.WheelView>
+    </LinearLayout>
+</RelativeLayout>

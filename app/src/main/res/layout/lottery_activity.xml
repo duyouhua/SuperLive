@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/v4_main" >
+
+        <ImageButton
+            android:id="@+id/btn_help"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:visibility="gone"
+            android:background="@drawable/head_btn_bg"
+            android:src="@drawable/jifen_help" />
+        <ImageButton
+            android:id="@+id/web_back"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:background="@drawable/head_btn_bg"
+            android:src="@drawable/finish" />
+
+        <ImageButton
+            android:id="@+id/btn_ranking"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_alignParentRight="true"
+            android:visibility="gone"
+            android:background="@drawable/head_btn_bg"
+            />
+
+        <RadioGroup
+            android:id="@+id/lottery_rg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+            <RadioButton
+                android:id="@+id/lottery_touzhu"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:button="@null"
+                android:textColor="@color/v4_withe"
+                android:gravity="center"
+                android:layout_marginRight="0.4dp"
+                android:textSize="16sp"
+                android:checked="true"
+                android:text="彩票投注"/>
+            <View
+                android:layout_width="0.4dp"
+                android:layout_height="match_parent"
+                android:visibility="gone"
+                android:background="@color/white"/>
+            <RadioButton
+                android:id="@+id/lottery_jin"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:button="@null"
+                android:textColor="@color/text_main_white"
+                android:gravity="center"
+                android:visibility="gone"
+                android:text="积分竞猜"/>
+        </RadioGroup>
+    </RelativeLayout>
+    <FrameLayout
+        android:id="@+id/container_activity"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></FrameLayout>
+</LinearLayout>

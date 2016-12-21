@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="titlebar_color">#FDFDFD</color><!-- 253 253 253-->
+    <color name="textcolor_1">#333333</color><!-- 51 51 51-->
+    <color name="textcolor_2">#666666</color><!-- 102 102 102-->
+    <color name="editext_hint">#999999</color><!-- 153 153 153-->
+    <color name="bg">#F1F2F4</color>
+    <color name="view">#E6E6E6</color><!-- 230  230 230-->
+    <color name="color_129">#818181</color>
+    <color name="color_80black">#cc000000</color>
+    <color name="color_yellow">#ff7a00</color>
+    <color name="color_blue">#56A4FF</color>
+    <color name="color_chat_alarm">#D0A31C</color>
+    <color name="color_c6">#c6c6c6</color>
+    <color name="yellow_jinse">#FFC001</color>
+    <color name="window_bg">#fff5f5f5</color>
+    <color name="gray_888">#888888</color>
+    <color name="write_30">#30000000</color>
+    <color name="write_120">#90000000</color>
+    <color name="black">#ff000000</color>
+    <color name="dividerline">#E0E0E0</color>
+    <color name="detail_gray">#5f5f5f</color>
+    <color name="home_content">#fafafa</color>
+    <color name="fleet_gray">#888888</color>
+    <color name="leve_1">#FFC001</color>
+    <color name="leve_2">#FFC001</color>
+    <color name="leve_3">#FFC001</color>
+    <color name="leve_4">#FFC001</color>
+    <color name="leve_5">#FFC001</color>
+    <color name="leve_6">#FFC001</color>
+    <color name="leve_7">#FFC001</color>
+    <color name="leve_8">#FFC001</color>
+    <color name="leve_9">#FFC001</color>
+    <color name="leve_10">#FFC001</color>
+    <color name="update_pro">#0AB3F4</color>
+    <color name="update_bac">#30BBC7</color>
+    <color name="buton_bg">#D8D8D8</color><!-- 216  216 216-->
+    <color name="bg_red">#FF5358</color><!-- 255  83 88-->
+    <color name="line_code">#979797</color><!-- 151  151 151-->
+    <color name="main_bg">#F5F5F5</color><!-- 245  245 245-->
+    <color name="mine_line">#DFDFDF</color><!-- 223  223 223-->
+    <color name="greeey">#10ffffff</color>
+
+    <!--主题色-->
+    <color name="theme_color">#00b38a</color><!-- 0  179 138-->
+    <color name="v4_main">#00b38a</color>
+    <color name="main">#00b38a</color>
+
+    <color name="attention_item_status_fill_color">#EFEFEF</color><!-- 239  239 239-->
+    <color name="attention_item_line_color">#C7C7C7</color><!-- 199  199 199-->
+    <color name="white">#ffffff</color><!-- 255  255 255-->
+    <color name="rank_item_gold_num_color">#FF7A00</color><!-- 255  122 0-->
+    <color name="v4_withe">#ffffff</color>
+    <color name="text_color_black">#000000</color>
+    <color name="grey">#eeeeee</color>
+    <color name="text_color_tab_blue">#169fa5</color>
+    <color name="withe">#ffffff</color>
+    <color name="color_fc">#fcfcfc</color><!-- 252  252 252-->
+    <color name="color_DB">#DBDBDB</color>
+    <color name="color_black">#000000</color>
+    <color name="v4_gray_one">#666666</color>
+    <color name="color_ec">#ECECEC</color><!-- 236  236 236-->
+    <color name="system_message_content_color">#363636</color><!-- 54  54 54-->
+    <color name="charge_total_money_color">#91A5A6</color><!-- 149  165 166-->
+    <color name="transparent_background">#00000000</color>
+    <color name="transparent_background_">#00FFFFFF</color>
+    <color name="transparent_background_40">#40FFFFFF</color>
+    <color name="transparent_title">#66000000</color>
+    <color name="other_auchor_living_bg">#5E666C</color>
+    <color name="review_line_color">#e6e6e6</color><!--230 230 230-->
+    <color name="chat_activity_bg">#F1F2F4</color><!--241 242 244-->
+    <color name="chat_input_color">#bbbbbb</color><!--187 187 187-->
+    <color name="guess_details_rusult">#FF7A00</color><!--255 122 0-->
+    <color name="guess_details_line">#f8f8f8</color><!--248 248 248-->
+    <color name="red_theme">#E0544A</color><!--红包-->
+    <color name="transparent">#00000000</color>
+    <color name="v3_green">#33a624</color>
+    <color name="v4_gray_two">#999999</color>
+    <color name="square_looking">#8C88FF</color>
+    <color name="color65">#414141</color>
+
+    <!--黄色色-->
+    <color name="v4_alrm_yellow">#ff7a00</color>
+    <!--二级标题-->
+    <color name="v4_black_two">#333333</color>
+
+
+
+    <color name="v4_bg_eb">#ebebeb</color>
+    <!--边框-->
+    <color name="v4_border">#d1d1d1</color>
+    <color name="review_search_bg">#F6F6F6</color>
+    <color name="half_transparent">#80000000</color>
+    <color name="pre_item">#F1F2F4</color>
+    <color name="state_focused">#F1F2F4</color>
+    <color name="state_selected">#10000000</color>
+</resources>

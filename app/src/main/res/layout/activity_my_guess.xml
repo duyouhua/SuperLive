@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_bg"
+    android:orientation="vertical"
+    tools:context="com.joytouch.superlive.activity.MyGuessActivity">
+    <include
+        android:id="@+id/title"
+        layout="@layout/titlebar"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:background="@color/main">
+        <RelativeLayout
+            android:id="@+id/rl_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp">
+            <TextView
+                android:id="@+id/tv_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+900"
+                android:textColor="@color/white"
+                android:textSize="35sp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="分"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:layout_toRightOf="@id/tv_score"
+                android:layout_alignBottom="@id/tv_score"
+                android:layout_marginLeft="4dp"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rl_score"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp">
+            <TextView
+                android:id="@+id/tv_guess_times"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="竞猜次数：434次"
+                android:textSize="12sp"
+                android:textColor="@color/white"/>
+            <TextView
+                android:id="@+id/tv_percent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="胜率：69%"
+                android:textSize="12sp"
+                android:textColor="@color/white"
+                android:layout_toRightOf="@id/tv_guess_times"
+                android:layout_marginLeft="25dp"/>
+        </RelativeLayout>
+    </RelativeLayout>
+    <com.joytouch.superlive.widget.PullToRefreshLayout
+        android:id="@+id/refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <include layout="@layout/refresh_head" />
+        <com.joytouch.superlive.widget.PullableExpandableListView
+            android:id="@+id/elv_guess"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@null"
+            android:groupIndicator="@null" />
+        <include layout="@layout/load_more" />
+    </com.joytouch.superlive.widget.PullToRefreshLayout>
+
+</LinearLayout>

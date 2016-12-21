@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/popupAnimation"
+    android:orientation="vertical"
+    android:layout_gravity="bottom"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:gravity="center"
+                android:layout_alignParentBottom="true"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="30dp">
+                <TextView
+                    android:gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:background="@color/white"
+                    android:id="@+id/quxiao"
+                    android:textColor="#0000FF"
+                    android:text="取消"
+                    android:layout_width="50dp"
+                    android:layout_height="25dp"/>
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+                <TextView
+                    android:id="@+id/tv_sucess"
+                    android:gravity="center"
+                    android:layout_marginRight="10dp"
+                    android:background="@color/white"
+                    android:textColor="#0000FF"
+                    android:text="完成"
+                    android:layout_width="50dp"
+                    android:layout_height="25dp" />
+            </LinearLayout>
+            <com.joytouch.superlive.utils.city.ShopPicker
+                android:id="@+id/citypicker"
+                android:gravity="center"
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="200dp" />
+        </LinearLayout>
+    </FrameLayout>
+
+
+</LinearLayout>

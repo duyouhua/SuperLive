@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@drawable/retang_solid_addblack_bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="vertical"
+        android:background="@drawable/retang_solid_addblack_bg"
+        android:layout_width="230dp"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_marginTop="20dp"
+            android:textColor="#333333"
+            android:textSize="15dp"
+            android:layout_gravity="center_horizontal"
+            android:text="提示"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:layout_marginTop="7dp"
+            android:gravity="center"
+            android:textColor="#333333"
+            android:layout_gravity="center_horizontal"
+            android:text="是否進入直播间"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <LinearLayout
+            android:paddingBottom="25dp"
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tv_canle"
+                android:textColor="#606060"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:text="取消"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/tv_ok"
+                android:textColor="#606060"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:text="确定"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,24 @@
+{
+  "province": [
+    {
+      "area_id": "39",
+      "area_name": "篮球",
+      "area_parent_id": "9"
+    },
+    {
+      "area_id": "40",
+      "area_name": "足球",
+      "area_parent_id": "2"
+    },
+    {
+      "area_id": "40",
+      "area_name": "电竞",
+      "area_parent_id": "2"
+    },
+    {
+      "area_id": "62",
+      "area_name": "其它",
+      "area_parent_id": "22"
+    }
+  ]
+}

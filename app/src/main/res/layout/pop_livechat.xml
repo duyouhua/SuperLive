@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:scrollbars="none">
+    <LinearLayout
+        android:layout_gravity="bottom"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:id="@+id/iv_bg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        <LinearLayout
+            android:orientation="horizontal"
+            android:id="@+id/rl_chat_send"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@color/chat_activity_bg">
+            <EditText
+                android:layout_weight="1"
+                android:id="@+id/et_input"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="@color/white"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:hint="写评论..."
+                android:paddingLeft="10dp"
+                android:imeOptions="actionDone|flagNoExtractUi"
+                android:singleLine="true"/>
+            <TextView
+                android:id="@+id/tv_send"
+                android:layout_width="68dp"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:text="发送"
+                android:gravity="center"
+                android:textColor="@color/theme_color"
+                android:textSize="16sp"
+                android:layout_alignParentRight="true"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

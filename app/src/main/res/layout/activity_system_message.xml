@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_bg"
+    android:orientation="vertical"
+    tools:context="com.joytouch.superlive.activity.SystemMessageActivity">
+    <include
+        android:id="@+id/title"
+        layout="@layout/titlebar"/>
+    <TextView
+        android:id="@+id/tv_title_head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="撩味福利 | 本月特推出限量充值活动，本月充值第一笔6折活动"
+        android:textSize="20sp"
+        android:textColor="@color/textcolor_1"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginRight="35dp"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/line_code"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginTop="14dp"/>
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/system_message_content_color"
+        android:text="216将是微商腾飞的一年，想要涉足微商的新手们，只有选择一个有“钱途”有潜力的代理产品，才能在众人中脱颖而出,如果你十年前错过阿里巴巴，8年前又错过了淘宝，5年前又错过了天猫，那么2016年的微商，你就不能再错过了。每一次时代改革，都将造就一批富翁。国内流量加油站是市场前景好，选择国内流量加油站是您最明智的选择！
+话费流量代理！绝对先机！！
+最接地气的好项目:69元成移动、联通、电信三方官 方充值平台总代（绝对不是网络电话那种充值哦），即可终身享受本机号话费充值8.8折！超级流量6折起！同时还享受5层推广奖励和5层话费及流量返佣金！"
+        android:textSize="17sp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginTop="14dp"
+        android:lineSpacingExtra="3dp"/>
+</LinearLayout>

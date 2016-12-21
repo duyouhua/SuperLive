@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context="com.joytouch.superlive.activity.ShopActivity">
+    <RelativeLayout
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/theme_color">
+        <ImageView
+            android:id="@+id/iv_finish"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:background="@drawable/finish"/>
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@color/white"
+            android:textSize="18sp"/>
+        <ImageView
+            android:id="@+id/iv_right"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="8dp"
+            android:visibility="gone"/>
+        <ImageView
+            android:layout_marginRight="3dp"
+            android:id="@+id/asset_hongdian"
+            android:layout_marginTop="10dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/v4_hongdian"
+            android:layout_width="8dp"
+            android:layout_height="8dp" />
+        <TextView
+            android:layout_toLeftOf="@+id/asset_hongdian"
+            android:id="@+id/tv_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:textColor="@color/white"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="14dp"/>
+
+    </RelativeLayout>
+    <com.joytouch.superlive.utils.view.CommonShowView
+        android:id="@+id/loadstate_ing"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <com.joytouch.superlive.widget.PullToRefreshLayout
+        android:id="@+id/refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <include layout="@layout/refresh_head" />
+        <com.joytouch.superlive.widget.PullableListView
+            android:id="@+id/listView"
+            android:listSelector="#00000000"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#f1f2f3"
+            android:divider="@color/attention_item_line_color"
+            android:dividerHeight="1px">
+        </com.joytouch.superlive.widget.PullableListView>
+        <include layout="@layout/load_more" />
+    </com.joytouch.superlive.widget.PullToRefreshLayout>
+
+</LinearLayout>

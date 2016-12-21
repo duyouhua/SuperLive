@@ -1,0 +1,91 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 22
+    buildToolsVersion "23.0.2"
+
+    defaultConfig {
+        applicationId "com.joytouch.superlive"
+        minSdkVersion 15
+        targetSdkVersion 22
+        versionCode 201608029
+        versionName "5.3"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+    packagingOptions {
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/MANIFEST.MF'
+    }
+
+}
+if (project.hasProperty('keyalias')) {
+    android.signingConfigs.release.keyAlias = keyalias
+    android.buildTypes.release.signingConfig = android.signingConfigs.release
+}
+
+if (project.hasProperty('keystore')) {
+    android.signingConfigs.release.storeFile = file(keystore)
+}
+
+if (project.hasProperty('keyaliaspassword')) {
+    android.signingConfigs.release.keyPassword = keyaliaspassword
+}
+
+if (project.hasProperty('keystorepassword')) {
+    android.signingConfigs.release.storePassword = keystorepassword
+}
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'com.github.ctiao:DanmakuFlameMaster:0.4.6'
+    compile files('libsbammsdk.jar')
+    compile files('libs/universal-image-loader-1.9.4-SNAPSHOT.jar')
+    compile files('libstpmime-4.1.3.jar')
+    compile files('libs/gson-2.2.1.jar')
+    compile files('libs/jpush-android-2.1.0.jar')
+    compile files('libs/mta-sdk-1.6.2.jar')
+    compile files('libs/open_sdk_r5509.jar')
+    compile files('libs/SocialSDK_QQZone_3.jar')
+    compile files('libs/SocialSDK_tencentWB_1.jar')
+    compile files('libs/SocialSDK_WeiXin_2.jar')
+    compile files('libs/wkimageloader.jar')
+    compile 'com.umeng.analytics:analytics:latest.integration'
+    compile 'com.squareup.okhttp3:okhttp:3.2.0'
+    compile 'com.android.support:support-v4:22.2.1'
+    compile 'com.zhy:flowlayout-lib:1.0.1'
+    compile 'com.qiniu:happy-dns:0.2.7'
+    //主播特点标签
+    compile 'com.android.support:recyclerview-v7:24.0.0-alpha1'
+    compile 'com.lsjwzh:materialloadingprogressbar:0.5.8-RELEASE'
+    compile 'com.flyco.dialog:FlycoDialog_Lib:1.1.0@aar'
+    compile 'com.flyco.animation:FlycoAnimation_Lib:1.0.0@aar'
+    compile 'com.nineoldandroids:library:2.4.0'
+    compile files('libshttpserver-0.1.2.jar')
+    compile files('libshttputils-1.4.0.jar')
+    compile files('libsio-1.6.0.jar')
+    compile files('libstils3.1.8.jar')
+    compile files('libs/SocialSDK_tencentWB_2.jar')
+    compile files('libs/commons-codec-1.4.jar')
+    compile files('libs/pldroid-player-1.2.2.jar')
+    compile files('libs/alipaySDK-20150610.jar')
+    compile files('libs/commons-codec-1.4.jar')
+    compile files('libs/pldroid-player-1.2.2.jar')
+    compile files('libs/support-v13-13.0.0.jar')
+    compile files('libs/pldroid-camera-streaming-1.7.1.jar')
+}
+allprojects {
+    repositories {
+        mavenCentral()
+    }
+}

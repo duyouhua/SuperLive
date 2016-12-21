@@ -1,0 +1,468 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.joytouch.superlive">
+
+    <permission
+        android:name="com.joytouch.superlive.permission.JPUSH_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <uses-permission android:name="com.android.alarm.permission.SET_ALARM" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.CLEAR_APP_CACHE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="com.joytouch.superlive.permission.JPUSH_MESSAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.WRITE_APN_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RESTART_PACKAGES" />
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <application
+        android:name="com.joytouch.superlive.app.SuperLiveApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/logo"
+        android:label="@string/app_name"
+        android:screenOrientation="portrait"
+        android:theme="@android:style/Theme.NoTitleBar">
+
+        <!-- 友盟的appid -->
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="5386f37156240be6d000864b" />
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="test" />
+        <!-- 极光的appid -->
+        <meta-data
+            android:name="JPUSH_APPKEY"
+            android:value="fd748c49ced8cfd4f6209aeb" />
+        <meta-data
+            android:name="JPUSH_CHANNEL"
+            android:value="developer-default" />
+
+        <!-- JPush -->
+        <!-- Required SDK核心功能 -->
+        <activity
+            android:name="cn.jpush.android.ui.PushActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar">
+            <intent-filter>
+                <action android:name="cn.jpush.android.ui.PushActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.joytouch.superlive" />
+            </intent-filter>
+        </activity>
+        <!-- Required  SDK核心功能 -->
+        <service
+            android:name="cn.jpush.android.service.DownloadService"
+            android:enabled="true"
+            android:exported="false" />
+
+        <!-- Required SDK 核心功能 -->
+        <receiver
+            android:name="cn.jpush.android.service.PushReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter android:priority="1000">
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY" />
+                <!-- Required 显示通知栏 -->
+                <category android:name="com.joytouch.superlive" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="cn.jpush.android.service.PushService"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTER" />
+                <action android:name="cn.jpush.android.intent.REPORT" />
+                <action android:name="cn.jpush.android.intent.PushService" />
+                <action android:name="cn.jpush.android.intent.PUSH_TIME" />
+            </intent-filter>
+        </service>
+        <!-- Required SDK核心功能 -->
+        <receiver android:name="cn.jpush.android.service.AlarmReceiver" />
+        <!-- User defined.  For test only  用户自定义的广播接收器 -->
+        <receiver
+            android:name="com.joytouch.superlive.broadcast.JPushReceiver"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTRATION" />
+                <!-- Required  用户注册SDK的intent -->
+                <action android:name="cn.jpush.android.intent.UNREGISTRATION" />
+                <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED" />
+                <!-- Required  用户接收SDK消息的intent -->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED" />
+                <!-- Required  用户接收SDK通知栏信息的intent -->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED" />
+                <!-- Required  用户打开自定义通知栏的intent -->
+                <action android:name="cn.jpush.android.intent.ACTION_RICHPUSH_CALLBACK" />
+                <!-- Optional 用户接受Rich Push Javascript 回调函数的intent -->
+                <category android:name="com.joytouch.superlive" />
+            </intent-filter>
+        </receiver>
+
+        <!-- 微信分享返回结果 -->
+        <activity
+            android:name="com.joytouch.superlive.wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <!-- 微信支付返回结果 -->
+        <activity
+            android:name="com.joytouch.superlive.wxapi.WXPayEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar">
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.VIEW"/> -->
+            <!-- <category android:name="android.intent.category.DEFAULT"/> -->
+            <!-- <data android:scheme="wx4e6a27bc488cc1d2"/> -->
+            <!-- </intent-filter> -->
+        </activity>
+        <!--
+            <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        -->
+
+
+        <!-- QQ -->
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="tencent1101346802" />
+            </intent-filter>
+        </activity>
+
+        <!-- alipay sdk begin -->
+        <!--
+        <activity
+        android:name="com.alipay.sdk.app.H5PayActivity"
+        android:configChanges="orientation|keyboardHidden|navigation"
+        android:exported="false"
+        android:screenOrientation="behind"
+        android:windowSoftInputMode="adjustResize|stateHidden"></activity>
+        -->
+
+
+        <!-- Umeng注册SDK使用的Activity -->
+        <activity
+            android:name="com.umeng.socialize.view.ShareActivity"
+            android:configChanges="orientation|keyboard"
+            android:launchMode="singleTask"
+            android:noHistory="true"
+            android:theme="@style/Theme.UMDialog"
+            android:windowSoftInputMode="stateVisible|adjustResize" />
+
+        <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+        <activity
+            android:name="com.joytouch.superlive.activity.StartActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data
+                    android:host="SSXQ_ZB_FragmentActivity"
+                    android:scheme="ssxq" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.joytouch.superlive.activity.LoadPhoneActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.joytouch.superlive.activity.RegisterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.joytouch.superlive.activity.LotteryRecode"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.joytouch.superlive.activity.addviceSelectActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.joytouch.superlive.activity.addvicemanageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.joytouch.superlive.activity.UpdateaddressActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.joytouch.superlive.activity.LostPasswordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.joytouch.superlive.activity.LoadActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.joytouch.superlive.activity.LiuLiangActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.joytouch.superlive.activity.OtherUserMessageActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.joytouch.superlive.activity.LotteryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.joytouch.superlive.activity.JincaiActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.joytouch.superlive.activity.IntroductionActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.joytouch.superlive.activity.WebViewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.joytouch.superlive.activity.AttentionAndFansActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.joytouch.superlive.activity.SyatemInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.joytouch.superlive.activity.StoreActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.joytouch.superlive.activity.MainActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/jianpan"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity
+            android:name="com.joytouch.superlive.activity.MessageListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.joytouch.superlive.activity.cammerActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.joytouch.superlive.activity.Jinbi_detailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.joytouch.superlive.activity.GuessRankActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.joytouch.superlive.activity.UserInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.joytouch.superlive.activity.SystemMessageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.joytouch.superlive.activity.SettingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.joytouch.superlive.activity.ChargeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.joytouch.superlive.activity.MyGuessActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.joytouch.superlive.activity.MyGuessListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.joytouch.superlive.activity.LevelActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.joytouch.superlive.activity.ReviewPlayActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity
+            android:name="com.joytouch.superlive.activity.OtherAnchorActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.joytouch.superlive.activity.bindPhoneActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.joytouch.superlive.activity.LiveDetailActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/jianpan"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity
+            android:name="com.joytouch.superlive.activity.ChatActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity
+            android:name="com.joytouch.superlive.activity.GuessDetailsActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity
+            android:name="com.joytouch.superlive.activity.LiveEndActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity
+            android:name="com.joytouch.superlive.activity.ShopActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity
+            android:name="com.joytouch.superlive.activity.LiveSourceActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/dialogActivity"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity
+            android:name="com.joytouch.superlive.activity.ResetNameActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity
+            android:name="com.joytouch.superlive.activity.InputSignActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity
+            android:name="com.joytouch.superlive.activity.endZhiboActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity
+            android:name="com.joytouch.superlive.activity.ResetPasswordActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity
+            android:name="com.joytouch.superlive.activity.RecommendattentionList"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity
+            android:name="com.joytouch.superlive.activity.BlackActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity
+            android:name="com.joytouch.superlive.activity.FeedBackActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity
+            android:name="com.joytouch.superlive.activity.AboutUsActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity
+            android:name="com.joytouch.superlive.activity.LiveTitleActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity
+            android:name="com.joytouch.superlive.activity.TaskActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity
+            android:name="com.joytouch.superlive.activity.WeekAndMonthRankActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity android:name="com.joytouch.superlive.activity.MyPropActivity" />
+        <activity android:name="com.joytouch.superlive.activity.PersonalDataActivity" />
+        <activity
+            android:name="com.joytouch.superlive.activity.InvitationFriendActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity
+            android:name="com.joytouch.superlive.activity.LotteryDetailsActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/Dialog_bocop"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity
+            android:name="com.joytouch.superlive.activity.OpenLivingDetailsActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+
+        <receiver android:name="com.joytouch.superlive.broadcast.V4_AlarmReceiver" />
+
+        <activity android:name="com.joytouch.superlive.activity.LiveStreamingActivity"
+            android:windowSoftInputMode="adjustResize|adjustNothing"
+            android:screenOrientation="sensorLandscape"
+            android:configChanges="screenSize|keyboardHidden|orientation|layoutDirection"/>
+    </application>
+
+</manifest>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:background="@drawable/qiandaotask"
+            android:layout_width="290dp"
+            android:layout_height="370dp"
+            android:id="@+id/imageView2" />
+
+        <ImageView
+            android:layout_marginRight="10dp"
+            android:id="@+id/close"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/close"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignTop="@+id/imageView2"
+            android:layout_alignRight="@+id/imageView2"
+            android:layout_alignEnd="@+id/imageView2" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
